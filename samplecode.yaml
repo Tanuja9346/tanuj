@@ -1,0 +1,15 @@
+-name: nginx
+host: localhost
+become: yes
+tasks:
+  ansible.bulitin.debug:
+   msg: hi this is nginx
+  ansible.bulitin.state:
+    name: nginx
+    state: installed
+  ansible.bulitin.service:
+    name: nginx
+    state: started
+    enabled: yes
+
+  
