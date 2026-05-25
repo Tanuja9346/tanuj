@@ -1,0 +1,24 @@
+1.create web,app, db and configure them accourding to our documentation.
+install nginx or appache in web after remove default content run our application,
+
+** create non humar user i.e application user to run our service i.e example catalouge securely.
+** we need to write the systemd they give inputs.
+** if u know the package exact one u can easily install or else install from available package     according to our requirement.
+* web : html,css,angular etc.
+* catalouge: we used nodejs.{dependencies: npm install, package : package.json}
+* mongodb: db{nosql}
+* user,cart: nodejs.{javascript} #Node.js is used to build the backend (server-side) part of applications using JavaScript.
+* redis: cache {db}. yum model list -->list of versions.
+yum module enable version --> enable required version.
+
+* mongo clinet installed in one microservices i.e catalouge {mongo-org-shell}
+* catalouge,cart,user ---> redis connected and catalouge,user --> mongodb
+* mysql --> structed db
+* shipping : maven used, 
+* ratings,shipping  -connected--> mysql.
+* creating new configuration in systemd  we should use systemctl deamon-reload
+* rabbitmq ---> notification.{db}
+* payments --> python
+* dispatch --> go language.
+dns -->  routing your application.
+

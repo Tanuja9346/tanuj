@@ -13,3 +13,12 @@ tasks:
     enabled: yes
 
   
+
+#   App Type    	Stateless     	         Stateful	                 Node-level
+# Pod Identity	   same (interchangeable)	 Unique (pod-0, etc.)	      One per node
+# Volume Handling	  Shared/ephemeral	      Persistent perpod	          Optional
+# Update Strategy	  Rolling updates/rollin        Ordered updates	          Rolling out per node
+# Scaling	          Easily up/down	        Sequential	              Based on nodes
+# Use Case	       Web apps, APIs	            DBs, Kafka, Zookeeper	      Logs, Monitoring, CNI
+
+

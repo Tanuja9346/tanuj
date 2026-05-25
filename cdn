@@ -1,0 +1,19 @@
+If you are using Netflix, Hotstar, or any OTT platform and the video starts instantly without buffering, you're already experiencing the power of a CDN at work.
+
+A Content Delivery Network is a globally distributed system that helps deliver web content to users from the nearest possible location. It reduces load times, cuts latency, and improves performance.
+
+
+![alt text](image.png)
+
+At the heart of a CDN setup, there are two key components:
+
+Origin: This is where your main content lives. It could be a web server, a storage bucket like Amazon S3, or any backend system holding your files, APIs, images, or videos. The origin is the single source of truth for all your content.
+
+Edge Locations: These are geographically distributed servers that cache and serve content closer to the end users. When a user in London or Mumbai requests a file, instead of reaching all the way to the origin server in the US, the request is handled by the nearest edge location.
+
+Here’s how it flows in real world usage:
+
+
+User requests go to the nearest edge location.
+If cached, content is served instantly.
+...

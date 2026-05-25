@@ -1,0 +1,57 @@
+| Feature          | EKS (Managed)                      | Self-Managed Kubernetes  |
+| ---------------- | ---------------------------------- | ------------------------ |
+| Control Plane    | Managed by AWS                     | Managed by you           |
+| Scalability      | Built-in via Cluster Autoscaler    | Manual or using scripts  |
+| Upgrades         | AWS handles control plane upgrades | You must handle upgrades |
+| Security Patches | Auto-applied to control plane      | Manual                   |
+
+
+3. What are the main components of EKS?
+Answer:
+
+Control Plane (Managed by AWS): API Server, etcd, scheduler.
+
+Worker Nodes (EC2 or Fargate): Run your pods.
+
+Node Groups: Managed or self-managed EC2 node pools.
+
+VPC Networking: Pod and service communication.
+
+IAM Roles: For authentication and access control.
+
+🔹 4. What is a managed node group in EKS?
+Answer:
+A managed node group is a group of EC2 instances managed by AWS. AWS:
+
+Automatically provisions, updates, and replaces nodes.
+
+Integrates with Auto Scaling Groups.
+
+Handles health monitoring and drain during upgrades.
+
+ 5. How does EKS handle security?
+Answer:
+
+IAM Roles for Service Accounts (IRSA): Fine-grained access using IAM roles.
+
+Security Groups & NACLs: Control networking.
+
+Pod Security Standards: For restricting what pods can do.
+
+KMS Encryption: For secrets and etcd encryption.
+
+RBAC: Native Kubernetes role-based access control.
+
+ 15. What is IRSA in EKS and why is it important?
+Answer:
+IRSA = IAM Roles for Service Accounts
+
+Allows fine-grained IAM access from pods.
+
+More secure than using instance roles.
+
+Each pod/service account can assume its own IAM role via OIDC.
+
+IRSA = IAM Roles for Service Accounts
+Allows your pods to securely assume an IAM role using OIDC federation.
+
